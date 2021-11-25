@@ -46,8 +46,6 @@ public class ControlStatementsIntro {
         for(int i = 1; i < myVar; i++) {
             myVar ++;
         }
-
-
     }
 }
 
