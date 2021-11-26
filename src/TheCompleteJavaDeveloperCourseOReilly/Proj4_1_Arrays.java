@@ -1,3 +1,5 @@
+package TheCompleteJavaDeveloperCourseOReilly;
+
 import java.util.Scanner;
 
 public class Proj4_1_Arrays {

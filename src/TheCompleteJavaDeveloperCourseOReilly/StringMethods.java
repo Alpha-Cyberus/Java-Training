@@ -1,3 +1,5 @@
+package TheCompleteJavaDeveloperCourseOReilly;
+
 import java.util.Locale;
 
 public class StringMethods {

@@ -1,3 +1,5 @@
+package TheCompleteJavaDeveloperCourseOReilly;
+
 import java.util.Scanner;
 
 public class Proj2_1_AverageOfThree {
