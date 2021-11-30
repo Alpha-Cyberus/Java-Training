@@ -1,12 +1,11 @@
 package TheCompleteJavaDeveloperCourseOReilly;
 
 import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Proj6_2_TicTacToe {
     public static void main(String[] args) {
-        boolean gameOver;
+        int gameState; // 0= Game not over, 1= winner, 2= draw
         char currentPlayer = 'X'; // as cP
         char[][] gameGrid; // as gG
         int[] playerCoordinate; // as pC
@@ -26,10 +25,13 @@ public class Proj6_2_TicTacToe {
             gameGrid[playerCoordinate[0]][playerCoordinate[1]] = currentPlayer; // Input pC into gG
             printGrid(gameGrid); // Display grid
 
-            gameOver = checkState(gameGrid);// Check if someone wins
-        } while (!gameOver);
+            gameState = checkState(gameGrid);// Check for endgame conditions
+        } while (gameState == 0);
 
-        System.out.println("Game over. " + currentPlayer + " is the winner. Congratulations!");
+        switch (gameState) {
+            case 1 -> System.out.println("Game over. " + currentPlayer + " is the winner. Congratulations!");
+            case 2 -> System.out.println("Game over. The game was a draw. You both suck.");
+        }
     }
 
     public static char[][] initGrid() {
@@ -58,31 +60,24 @@ public class Proj6_2_TicTacToe {
 
     public static int[] playerInput(char[][] gG) {
         Scanner kbd = new Scanner(System.in);
-        String input = null;
-        boolean goodInput = false;
+        String input;
         int[] pI = new int[2];
-        
+
         do {
-            // Catch non-integer input
-//            while (!goodInput) {
-//                try {
-//                    input = String.valueOf(kbd.nextInt());
-//                    goodInput = true;
-//                } catch (InputMismatchException e) {
-//                    System.out.println("Only enter numbers and a space.");
-//                    kbd.nextLine();
-//                }
-//            }
             input = kbd.nextLine();
-            System.out.println(input);
-            if (input.length() > 3) {
-                System.out.println("Input must be: number space number! Try again.");
+            if (input.length() != 3 || input.charAt(1) != ' ') { // Test: input length with space in middle
+                System.out.println("Input must be number space number. Try again.");
                 continue;
             }
-            // gG ranges from 0-2 but 1-3 is easier for brain to understand,
-            // so take 1-3 as input and -1 to make it fit the array.
-            pI[1] = Integer.parseInt(input.substring(0,1)) - 1;
-            pI[0] = Integer.parseInt(input.substring(2)) - 1;
+
+            try { // Test: Input is numeric only
+                pI[1] = Integer.parseInt(input.substring(0,1)) - 1; // -1 because input is 1-3 and gG goes 0-2
+                pI[0] = Integer.parseInt(input.substring(2)) - 1;
+            }catch (Exception e) {
+                System.out.println("Input must be number space number. Try again.");
+                continue;
+            }
+
             if (pI[1] < 0 || pI[1] > 2) {
                 System.out.println("First number is not between 1 and 3, try again.");
                 continue;
@@ -99,22 +94,32 @@ public class Proj6_2_TicTacToe {
         return pI;
     } // end playerCoordinate
 
-    public static boolean checkState(char[][] gG) {
-        // if first space not empty and whole row or column matches
+    public static int checkState(char[][] gG) {
+        // If first space not empty and whole row or column matches (winner)
         for (int i = 0; i < 3; i++) {
             if (gG[i][0] != ' ' && gG[i][0] == gG[i][1] && gG[i][1] == gG[i][2]) {
-                return true;
+                return 1;
             } else if (gG[0][i] != ' ' && gG[0][i] == gG[1][i] && gG[1][i] == gG[2][i]) {
-                return true;
+                return 1;
             }
         }
-        // if corner not empty and whole diagonal matches
+        // If corner not empty and whole diagonal matches (winner)
         if (gG[0][0] != ' ' && gG[0][0] == gG[1][1] && gG[1][1] == gG[2][2]) {
-            return true;
+            return 1;
         } else if (gG[0][2] != ' ' && gG[0][2] == gG[1][1] && gG[1][1] == gG[2][0]) {
-            return true;
+            return 1;
         }
-        return false;
+
+        // If any space is empty (continue game)
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (gG[i][j] == ' ') {
+                    return 0;
+                }
+            }
+        }
+        // Board is full (tie)
+        return 2;
     } // end checkState
 
     public static char setPlayer(char cP) {
