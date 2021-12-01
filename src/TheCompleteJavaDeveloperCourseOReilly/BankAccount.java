@@ -1,7 +1,5 @@
 package TheCompleteJavaDeveloperCourseOReilly;
 
-import java.security.PublicKey;
-
 public class BankAccount {
     private final String owner;
     private int balance;

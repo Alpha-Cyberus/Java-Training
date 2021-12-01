@@ -1,0 +1,40 @@
+Radius: 5.0
+Circumference: 31.42
+Area: 78.54
+
+Radius: 1.0
+Circumference: 6.28
+Area: 3.14
+
+Radius: 48.0
+Circumference: 301.59
+Area: 7238.23
+
+Radius: 6.0
+Circumference: 37.70
+Area: 113.10
+
+Radius: 2.6
+Circumference: 16.34
+Area: 21.24
+
+Radius: 42.0
+Circumference: 263.89
+Area: 5541.77
+
+Radius: 23.64
+Circumference: 148.53
+Area: 1755.68
+
+Radius: 598.0
+Circumference: 3757.34
+Area: 1123446.10
+
+Radius: 7.0
+Circumference: 43.98
+Area: 153.94
+
+Radius: 1010.101
+Circumference: 6346.65
+Area: 3205379.65
+

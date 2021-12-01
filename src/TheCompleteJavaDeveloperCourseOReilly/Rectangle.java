@@ -36,6 +36,8 @@ public class Rectangle {
         return length * width;
     }
 
+    public double perimiter() { return (length * 2) + (width * 2); }
+
     public static int getNumRectangles() {
         return numRectangles;
     }
