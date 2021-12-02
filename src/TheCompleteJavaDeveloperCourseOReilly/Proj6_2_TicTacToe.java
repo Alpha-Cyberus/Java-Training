@@ -90,8 +90,7 @@ public class Proj6_2_TicTacToe {
             }
             break;
         } while (true);
-        
-        kbd.close();
+
         return pI;
     } // end playerCoordinate
 
@@ -124,11 +123,11 @@ public class Proj6_2_TicTacToe {
     } // end checkState
 
     public static char setPlayer(char cP) {
-            if (cP == 'X') {
-                cP = 'O';
-            } else {
-                cP = 'X';
-            }
+        if (cP == 'X') {
+            cP = 'O';
+        } else {
+            cP = 'X';
+        }
         return cP;
     } // end setPlayer
 }
