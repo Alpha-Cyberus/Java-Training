@@ -19,5 +19,6 @@ public class Proj4_3_Parallel {
         for (int i = 0; i < 5; i++) {
             System.out.println(arrNames.get(i) + " is " + arrAge[i] + " years old.");
         }
+        kbd.close();
     }
 }

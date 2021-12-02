@@ -1,7 +1,5 @@
 package TheCompleteJavaDeveloperCourseOReilly;
 
-import java.util.Locale;
-
 public class StringMethods {
     public static void main(String[] args) {
         String name1 = "Dovahkiin";
@@ -19,10 +17,10 @@ public class StringMethods {
             System.out.println("Less than or equal");
         }
 
-        String upper = name1.toUpperCase();
-        String lower = name1.toLowerCase();
-        String firstHalf = name1.substring(4);
-        int findK = name1.indexOf("k");
+//        String upper = name1.toUpperCase();
+//        String lower = name1.toLowerCase();
+//        String firstHalf = name1.substring(4);
+//        int findK = name1.indexOf("k");
 
         StringBuilder sb = new StringBuilder("Jim Darkmagic");
         sb.append(" is  aqesome");

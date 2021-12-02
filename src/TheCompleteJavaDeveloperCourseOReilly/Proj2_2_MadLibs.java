@@ -32,5 +32,6 @@ public class Proj2_2_MadLibs {
 
         System.out.println("There once was a " + adj1 + " girl named " + gName + ", who was a " + adj2 + " " + occ1 + " in the Kingdom of " + place + ". She loved to wear " + cloth + " and to " + hobby + ".");
         System.out.println("She wanted to marry the " + adj3 + " " + occ2 + " named " + bName + " but her father, King " + mName + " forbid her from seeing him.");
+        keyboard.close();
     }
 }

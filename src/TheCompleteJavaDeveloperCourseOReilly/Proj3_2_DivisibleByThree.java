@@ -14,6 +14,7 @@ public class Proj3_2_DivisibleByThree {
         } else {
             System.out.println(myNum + " is not divisible by 3 :(");
         }
+        keyboard.close();
 
     }
 }

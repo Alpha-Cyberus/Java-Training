@@ -16,5 +16,6 @@ public class UserInput {
         age = keyboard.nextInt();
         keyboard.nextLine();
         System.out.println("Age is " + age);
+        keyboard.close();
     }
 }

@@ -27,5 +27,6 @@ public class Proj5_1_NamePermutations {
                 System.out.println(f + " " + l);
             }
         }
+        kbd.close();
     }
 }

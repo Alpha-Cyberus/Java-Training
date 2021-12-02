@@ -1,6 +1,5 @@
 package TheCompleteJavaDeveloperCourseOReilly;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class ArraysIn2d {

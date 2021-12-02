@@ -19,5 +19,6 @@ public class Proj2_1_AverageOfThree {
         float result = (realNum1 + realNum2 + realNum3) / inputCount;
 
         System.out.println("Average: " + result);
+        keyboard.close();
     }
 }

@@ -15,5 +15,6 @@ public class Proj4_1_Arrays {
         for (int j : arrNum) {
             System.out.println(j * 2);
         }
+        kbd.close();
     }
 }

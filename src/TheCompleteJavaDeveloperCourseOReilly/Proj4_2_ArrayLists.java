@@ -23,5 +23,6 @@ public class Proj4_2_ArrayLists {
         for (int i = arrList.size() - 1; i >= 0; i--) {
             System.out.println(arrList.get(i));
         }
+        kbd.close();
     }
 }

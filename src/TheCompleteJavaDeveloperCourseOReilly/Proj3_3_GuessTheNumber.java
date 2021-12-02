@@ -34,5 +34,6 @@ public class Proj3_3_GuessTheNumber {
         if (myGuess == myNum) {
             System.out.println("Correct, the number was " + myNum + ". You found it in " + guessCount + " attempts.");
         }
+        kbd.close();
     }
 }

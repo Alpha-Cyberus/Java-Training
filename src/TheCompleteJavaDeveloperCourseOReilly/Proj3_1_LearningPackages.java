@@ -37,5 +37,6 @@ public class Proj3_1_LearningPackages {
                 System.out.println("Total cost: " + (15 + (crsExtra*3)));
                 break;
         }
+        keyboard.close();
     }
 }

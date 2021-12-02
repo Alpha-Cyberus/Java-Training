@@ -90,7 +90,8 @@ public class Proj6_2_TicTacToe {
             }
             break;
         } while (true);
-
+        
+        kbd.close();
         return pI;
     } // end playerCoordinate
 

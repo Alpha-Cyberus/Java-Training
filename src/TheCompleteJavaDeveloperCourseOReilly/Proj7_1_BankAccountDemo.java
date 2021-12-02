@@ -1,7 +1,5 @@
 package TheCompleteJavaDeveloperCourseOReilly;
 
-import java.util.Arrays;
-
 public class Proj7_1_BankAccountDemo {
     public static void main(String[] args) {
         BankAccount myBank = new BankAccount("Luffy", 15);

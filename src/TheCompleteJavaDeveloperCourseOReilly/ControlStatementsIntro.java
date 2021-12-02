@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class ControlStatementsIntro {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner keyboard = new Scanner(System.in);
         int myVar = 1;
         int input;
         // Sequence control statements
@@ -48,6 +49,7 @@ public class ControlStatementsIntro {
         for(int i = 1; i < myVar; i++) {
             myVar ++;
         }
+        keyboard.close();
     }
 }
 
