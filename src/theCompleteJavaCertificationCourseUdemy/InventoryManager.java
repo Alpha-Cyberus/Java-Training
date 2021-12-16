@@ -2,10 +2,11 @@ package theCompleteJavaCertificationCourseUdemy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class InventoryManager {
 
-	List<Product> soldProductsList = new ArrayList<Product>();
+	List<Product> soldProductsList = new CopyOnWriteArrayList<Product>();
 	List<Product> purchasedProductsList = new ArrayList<Product>();
 	
 	public void populateSoldProducts() {
