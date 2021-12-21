@@ -1,5 +1,5 @@
 package theCompleteJavaCertificationCourseUdemy;
-//test
+//test2
 public class MessageProcessor implements Runnable {
 	private int message;
 	
